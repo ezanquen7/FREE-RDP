@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Open Mind Demo - Advanced AI Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>The Open Mind</h1>
+                    <span class="beta">DEMO</span>
+                </div>
+                <div class="header-info">
+                    <span class="status-indicator">
+                        <i class="fas fa-circle"></i>
+                        Online
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Disclaimer Banner -->
+        <div class="disclaimer-banner">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Educational Demo: This is a demonstration interface showing advanced AI interaction concepts. All responses are generated for educational purposes.</span>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chat Interface -->
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Advanced AI Conversation</h2>
+                    <div class="chat-controls">
+                        <button class="btn btn-secondary" id="clearChat">
+                            <i class="fas fa-trash"></i>
+                            Clear
+                        </button>
+                        <button class="btn btn-secondary" id="exportChat">
+                            <i class="fas fa-download"></i>
+                            Export
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message assistant-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender">The Open Mind</span>
+                                <span class="timestamp">Just now</span>
+                            </div>
+                            <div class="message-text">
+                                Welcome to The Open Mind Demo! I'm an advanced AI designed to engage in thoughtful, nuanced conversations on a wide range of topics. I can help with analysis, creative tasks, problem-solving, and complex discussions while maintaining intellectual honesty and depth.
+                                
+                                <br><br>What would you like to explore today?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="chatInput" 
+                            placeholder="Ask anything... Press Ctrl+Enter to send"
+                            rows="1"
+                        ></textarea>
+                        <button class="send-button" id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="input-footer">
+                        <span class="character-count" id="charCount">0 characters</span>
+                        <div class="quick-prompts">
+                            <button class="quick-prompt">Analyze this topic</button>
+                            <button class="quick-prompt">Creative writing</button>
+                            <button class="quick-prompt">Problem solving</button>
+                            <button class="quick-prompt">Philosophical discussion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="feature-panel">
+                    <h3>Capabilities</h3>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <h4>Deep Analysis</h4>
+                                <p>Multi-layered reasoning and critical thinking</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-palette"></i>
+                            <div>
+                                <h4>Creative Generation</h4>
+                                <p>Original content creation and ideation</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <div>
+                                <h4>Problem Solving</h4>
+                                <p>Complex problem decomposition and solutions</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h4>Nuanced Discussion</h4>
+                                <p>Multi-perspective analysis and dialogue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-panel">
+                    <h3>Session Stats</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Messages:</span>
+                        <span class="stat-value" id="messageCount">1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Response Time:</span>
+                        <span class="stat-value" id="avgResponseTime">~1.2s</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Topics Covered:</span>
+                        <span class="stat-value" id="topicCount">0</span>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Important Notice</h3>
+                    <p>This is a demonstration interface showcasing advanced AI interaction concepts. The AI is designed to provide thoughtful, nuanced responses while maintaining appropriate boundaries.</p>
+                    
+                    <h4>Guidelines:</h4>
+                    <ul>
+                        <li>Engage in good faith discussions</li>
+                        <li>Respect intellectual honesty</li>
+                        <li>Consider multiple perspectives</li>
+                        <li>Use responsibly for educational purposes</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 The Open Mind Demo - Educational AI Interface</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-brain fa-spin"></i>
+            <p>Processing your request...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
